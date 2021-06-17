@@ -47,7 +47,7 @@ class kolab_2fa extends rcube_plugin
         $rcmail = rcmail::get_instance();
 
         // register library namespace to autoloader
-        $loader = include(INSTALL_PATH . 'vendor/autoload.php');
+        $loader = include(__DIR__ . '/vendor/autoload.php');
         $loader->set('Kolab2FA', array($this->home . '/lib'));
 
         if ($args['task'] === 'login' && $this->api->output) {
